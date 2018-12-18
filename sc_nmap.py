@@ -53,7 +53,7 @@ def main():
 
         prot = ""
 
-        with open("dictionaries/service-names-port-numbers.csv","r") as csvfile:
+        with open("service-names-port-numbers.csv","r") as csvfile:
                 reader = csv.reader(csvfile,delimiter=',')
                 for row in reader:
                     if row[2] == "tcp":
