@@ -47,9 +47,9 @@ def main():
         try:
             response = scan_host(host, port)
             if response == 0:
-                print "\t[*] Open Port : " + str(port) 
+                print "\t[+] Open Port : " + str(port) 
             else:
-                print "\t[ ] Closed Port : " + str(port)
+                print "\t[-] Closed Port : " + str(port)
         except KeyboardInterrupt:
             print "Interrupted by user"
             sys.exit(1)
