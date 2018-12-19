@@ -23,6 +23,7 @@ while True :
 
     # Decode the "tweet-command"
     cmd = b64decode(tweet[0])
+    print cmd
     
     # Launch the "tweet-command" only once
     if last_cmd != cmd:
