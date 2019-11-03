@@ -1,3 +1,3 @@
-# PythonENI
+# PythonELearning
 
-Apprentissage de Python
+Some scripts I wrote when learning Python for penetration testing.
